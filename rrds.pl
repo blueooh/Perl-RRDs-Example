@@ -10,6 +10,7 @@ my $RRD_GRAPH = "$PATH"."graph/demo_graph.png";
 
 my $rand;
 my $error;
+my $interval = 1;
 
 if( -e $RRD ) {
 	print "unlink $RRD file.\n";
@@ -57,7 +58,7 @@ while(1) {
 
 	print("\n");
 
-	sleep(1);
+	sleep($interval);
 }
 
 sub rrd_error {
